@@ -1,0 +1,53 @@
+CREATE TABLE factura (
+    id_factura INT PRIMARY KEY NOT NULL,
+    fecha_fac DATE NOT NULL,
+    forma_pago VARCHAR(70) NOT NULL
+         
+);
+,
+costo VARCHAR(45) NOT NULL,
+    valor_venta VARCHAR(20) NOT NULL
+    direccion VARCHAR(45) NOT NULL,
+    telefono VARCHAR(45) NOT NULL,
+    email VARCHAR(45) NOT NULL
+    
+ALTER TABLE pedidos
+ADD CONSTRAINT fk_pedidos_usuarios
+FOREIGN KEY (id_usuario) REFERENCES usuarios(id);
+
+
+-- Asegúrate de tener las tablas creadas
+CREATE TABLE usuarios (
+    id INT PRIMARY KEY,
+    nombre VARCHAR(50),
+    correo VARCHAR(100)
+);
+
+CREATE TABLE detalle_pedido (
+    id_pedido INT PRIMARY KEY,
+    id_usuario INT,
+    cantidad INT
+);
+
+ALTER TABLE factura
+ADD COLUMN id_pedido INT NOT NULL;
+
+ALTER TABLE detalle_pedido
+ADD CONSTRAINT fk_id_producto
+FOREIGN KEY (id_producto) REFERENCES producto(id_producto),
+ADD CONSTRAINT fk_id_pedido
+FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido);
+
+
+
+ALTER TABLE factura
+ADD CONSTRAINT fk_id_pedido3
+FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido);
+
+ALTER TABLE detalle_pedido
+ADD CONSTRAINT fk_id_producto2
+FOREIGN KEY (id_producto) REFERENCES producto(id_producto);
+
+SELECT fk_id_pedido, fk_id_producto FROM detalle_pedido;
+SELECT * FROM detalle_pedido;
+

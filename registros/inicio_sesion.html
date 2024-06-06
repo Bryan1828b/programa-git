@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+    <div class="row  valign-wrapper" style="height: 90vh;">
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
+            <div class="white">
+                <h4 class="center-align">Iniciar Sesión</h4>
+                <form>
+                    <div class="input-field ">
+                        <input id="correo" type="email" class="validate">
+                        <label for="correo">Correo Electrónico</label>
+                    </div>
+                    <div class="input-field">
+                        <input id="contrasena" type="password" class="validate">
+                        <label for="contrasena">Contraseña</label>
+                    </div>
+                    <div class="center-align">
+                    	
+                    		<a id="btn-iniciar"class="btn waves-effect waves-light blue" type="submit" name="action">Iniciar Sesión</a>
+                    	
+                        
+                        <a href="registro.html" class="btn waves-effect waves-light blue">
+                        	 Registrarse
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+       
+<script>
+    const correo =document.querySelector("#correo");
+    const password = document.querySelector("#contrasena")
+    const button = document.getElementById("btn-iniciar")
+    button.addEventListener("click", (event)=>{
+        console.log(event)
+        validateEmpty(correo.value, password.value);
+        
+    })
+
+
+    function validateEmpty(valueInput, valueInput2){
+       if(valueInput.length == 0 || valueInput2.length == 0){
+            alert("debe llenar el campo de correo y contraseña")
+       }else{
+            window.location.href = "../index.html"
+       }
+    }
+
+
+</script>
+
+        
+           
+
+    
+   
+
+</body>
+</html>

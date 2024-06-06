@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Marcos Store</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper blue">
+             <a href="#" class="brand-logo">DON MARCOS STORE</a>
+             <ul id="nav-mobile" class="right hide-on-med-and-down">
+                 <li><a href="index.html">inicio</a></li>
+                 <li><a href="categorias.html">categorias</a></li>
+                  <li><a href="carrito.html"><i class="large material-icons">local_grocery_store</i></a></li>
+             </ul>
+        </div>
+    </nav>
+
+<h1 class="container">Formulario de Contacto</h1>
+<div class="container valign-wrapper row" style="height: 70vh;">
+<form action="" method="post" enctype="text/plain">
+    <label for="correo">Tu Correo Electrónico:</label>
+    <input type="email" id="correo" name="correo" required>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+    <input  class="btn blue col s12 center-align" type="submit" value="Enviar Mensaje" onclick="M.toast({html: 'Mensaje enviado con exito'})">
+</form>
+</div>
+<footer class="page-footer grey">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Sobre nosotros</h5>
+                <p class="grey-text text-lighten-4">Somos la tienda lider del barrio bosa gran colombiano venimos a traer un servicio novedoso.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="categorias.html">categorias</a></li>
+                  <li><a class="grey-text text-lighten-3" href="carrito.html">carrito</a></li>
+                  <li><a class="grey-text text-lighten-3" href="mapaProcesos.html">mapa de navegacion</a></li>
+                  <li><a class="grey-text text-lighten-3" href="contacto.html">Contacto</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2023 Tienda Don Marcos
+           
+            </div>
+          </div>
+        </footer>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ 
+</body>
+</html>
